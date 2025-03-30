@@ -3,8 +3,8 @@ import SwiftUI
 
 extension UICollectionView.CellRegistration {
   
-  static func hosting<Content: View, Item: Hashable & Sendable>(
-    content: @escaping (IndexPath, Item) -> Content) -> UICollectionView.CellRegistration<UICollectionViewCell, Item> {
+  static func hosting<Content: View, CellItem: Hashable & Sendable>(
+    content: @escaping (IndexPath, CellItem) -> Content) -> UICollectionView.CellRegistration<UICollectionViewCell, CellItem> {
       
       UICollectionView.CellRegistration { cell, indexPath, item in
         
